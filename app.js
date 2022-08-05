@@ -9,13 +9,14 @@ const updateClock = () => {
     
     
 
-    let h = time.getHours() + 12;
+    let h = time.getHours();
     let m = time.getMinutes()
     let s = time.getSeconds()
     console.log(h)
 
-    if (h >= 12){
-        amPm.innerText = 'AM'
+    if (h > 12){
+        h -= 12;
+        amPm.innerText = 'PM'
     }
     hours.innerText = h
     mintues.innerText = m
